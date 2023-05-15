@@ -157,11 +157,11 @@ updateFormEl["commit"].addEventListener("click", function () {
   if (updateFormEl.checkValidity()) {
     var actorIdRefsToAdd = [], actorIdRefsToDelete = [];
     for (const optionEl of updateSelectedActorsListEl.children) {
-      if (optionEl.classList.contains("removed")) {
-        actorIdRefsToDelete.push( optionEl.getAttribute("data-value"));
-      }
       if (optionEl.classList.contains("added")) {
         actorIdRefsToAdd.push( optionEl.getAttribute("data-value"));
+      }
+      if (optionEl.classList.contains("removed")) {
+        actorIdRefsToDelete.push( optionEl.getAttribute("data-value"));
       }
     }
 
