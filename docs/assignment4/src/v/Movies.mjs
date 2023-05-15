@@ -169,7 +169,7 @@ updateFormEl["commit"].addEventListener("click", function () {
       slots.actorIdRefsToAdd = actorIdRefsToAdd;
     }
     if (actorIdRefsToDelete.length > 0) {
-      slots.actorIdRefsToDelete = actorIdRefsToDelete;
+      slots.actorIdRefsToRemove = actorIdRefsToDelete;
     }
 
     Movie.update( slots);
