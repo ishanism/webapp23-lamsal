@@ -115,7 +115,7 @@ updateSelectMovieEl.addEventListener("change", function () {
   const saveButtonEl = updateFormEl["commit"],
         movieId = updateSelectMovieEl.value,
         updateSelectDirectorEl = updateFormEl["selectDirector"],
-        updateSelectActorsWidgetEl = updateFormEl.querySelector("div.selectActorsWidget");
+        updateSelectActorsWidgetEl = updateFormEl.querySelector("div.MultiSelectionWidget");
   if (movieId) {
     const movie = Movie.instances[movieId];
     updateFormEl.movieId.value = movie.movieId;
