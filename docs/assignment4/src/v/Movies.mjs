@@ -138,7 +138,7 @@ updateSelectMovieEl.addEventListener("change", function () {
 
 updateFormEl["commit"].addEventListener("click", function () {
   const movieIdRef = updateSelectMovieEl.value,
-    updateSelectActorsWidgetEl = updateFormEl.querySelector("div.selectActorsWidget"),
+    updateSelectActorsWidgetEl = updateFormEl.querySelector("div.MultiSelectionWidget"),
     updateSelectedActorsListEl = updateSelectActorsWidgetEl.firstElementChild;
   if (!movieIdRef) return;
   const slots = {
