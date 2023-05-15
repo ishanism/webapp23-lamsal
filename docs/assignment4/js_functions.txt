@@ -1,0 +1,40 @@
+movieId[1] : PositiveInteger {id}
+<<get/set>> movieId[1] : number(int) {id}
+checkMovieId (in movieId : number(int)) : ConstraintViolation
+checkMovieIdasId (in movieId : number(int)) : ConstraintViolation
+
+title[1] : String
+<<get/set>> title[1] : string
+checkTitle (in title : string) : ConstraintViolation
+
+releaseDate [1] : Date
+<<get/set>> releaseDate [1] : Date
+checkReleaseDate (in releaseDate : Date) : ConstraintViolation
+
+
+director[1] : Person
+<<get/set>> director[1] : Person
+checkDirector (in director : Person) : ConstraintViolation
+
+
+actors[*]: Person
+<<get/set>> actors[*]: Person
+checkActor (in actors : Person) : ConstraintViolation
+addActor (in actor : Person)
+removeActor (in actor : Person)
+
+
+<<get/set>> movieId[1] : number(int) {id}
+<<get/set>> title[1] : string
+<<get/set>> releaseDate [1] : Date
+<<get/set>> director[1] : Person
+<<get/set>> actors[*]: Person
+
+checkMovieId (in movieId : number(int)) : ConstraintViolation
+checkMovieIdasId (in movieId : number(int)) : ConstraintViolation
+checkTitle (in title : string) : ConstraintViolation
+checkReleaseDate (in releaseDate : Date) : ConstraintViolation
+checkDirector (in director : Person) : ConstraintViolation
+checkActor (in actors : Person) : ConstraintViolation
+addActor (in actor : Person)
+removeActor (in actor : Person)

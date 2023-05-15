@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head
+  <meta charset="UTF-8" />
+  <title>Assignment 4: CRUD Movies by Lamsal</title>
+  <script src="./src/v/Movies.mjs" type="module"></script>
+</head>
+<body>
+  
+
+  <main>
+    <div>
+
+      <!-- Movie Menu Section -->
+
+      <section id="Movie-Menu">
+        <h2>Movie Menu</h2>
+        <ul>
+          <li>
+            <button type="button" id="M_CRUD_R">
+              Retrieve and List All Movies
+            </button>
+          </li>
+          <li>
+            <button type="button" id="M_CRUD_C">Create Movie</button>
+          </li>
+          <li>
+            <button type="button" id="M_CRUD_U">Update Movie</button>
+          </li>
+          <li>
+            <button type="button" id="M_CRUD_D">Delete Movie</button>
+          </li>
+        </ul>
+
+        <a href="index.html">
+          <button type="button">Back to Main Menu</button>
+        </a>
+      </section>
+
+      <!-- Movie Menu Section END -->
+
+      <!-- Movie CRUD Section - R -->
+
+      <section id="Movie-CRUD-R">
+        <h2>Retrieve and List All Movies</h2>
+        <table border="true">
+          <thead>
+            <tr>
+              <th>Movie ID</th>
+              <th>Title</th>
+              <th>Release Date</th>
+              <th>Director</th>
+              <th>Actors</th>
+            </tr>
+          </thead>
+          <tbody id="Movie-CRUD-R-List"></tbody>
+        </table>
+        
+        <button type="button" class="back-to-movies-crud-menu">Back to Movies CRUD Menu</button>
+
+        <a href="index.html">
+          <button type="button">Back to Main Menu</button>
+        </a>
+      </section>
+
+      <!-- Movie CRUD Section - R END -->
+
+      <!-- Movie CRUD Section - C -->
+
+      <section id="Movie-CRUD-C">
+        <h2>Create Movie</h2>
+        <form id="Movie-CRUD-C-Form">
+          <div>
+            <label>Movie ID: </label>
+            <input type="text" name="movieId" />
+          </div>
+          <div>
+            <label>Title: </label>
+            <input type="text" name="title" />
+          </div>
+          <div>
+            <label>Release Date: </label>
+            <input
+              type="date"
+              name="releaseDate"
+            />
+          </div>
+          <div>
+            <label>Director: 
+              <select name="selectDirector"></select>
+            </label>
+          </div>
+          <div>
+            <label>Actors: 
+              <select name="selectActors" multiple="multiple"></select>
+            </label>
+          </div>
+          <div>
+            <button type="submit" name="commit">Save Movie</button>
+          </div>
+        </form>
+
+        <button type="button" class="back-to-movies-crud-menu">Back to Movies CRUD Menu</button>
+
+        <a href="index.html">
+          <button type="button">Back to Main Menu</button>
+        </a>
+      </section>
+
+      <!-- Movie CRUD Section - C END -->
+
+      <!-- Movie CRUD Section - U -->
+
+      <section id="Movie-CRUD-U">
+        <h2>Update Movie</h2>
+        <form>
+          <div>
+            <label>Select Movie: 
+              <select name="selectMovie"><option value=""> --- </option></select>
+            </label>
+          </div>
+          <div>
+            <label>Movie ID: </label>
+            <output name="movieId" />
+          </div>
+          <div>
+            <label>Title: </label>
+            <input type="text" name="title" />
+          </div>
+          <div>
+            <label>Release Date: </label>
+            <input
+              type="date"
+              name="releaseDate"
+            />
+          </div>
+          <div>
+            <label>Director: 
+              <select name="selectDirector"></select>
+            </label>
+          </div>
+          <div class="widget">
+            <label>Actors:</label>
+            <div class="MultiSelectionWidget"></div>
+          </div>
+          <div>
+            <button type="submit" name="commit" disabled="disabled">Save Movie</button>
+          </div>
+        </form>
+
+        <button type="button" class="back-to-movies-crud-menu">Back to Movies CRUD Menu</button>
+
+        <a href="index.html">
+          <button type="button">Back to Main Menu</button>
+        </a>
+      </section>
+
+      <!-- Movie CRUD Section - U END -->
+
+      <!-- Movie CRUD Section - D -->
+
+      <section id="Movie-CRUD-D">
+        <h2>Delete Movie</h2>
+        <form>
+          <div>
+            <label>Select Movie: 
+              <select name="selectMovie"><option value=""> --- </option></select>
+            </label>
+          </div>
+          <div>
+            <button type="submit" name="commit">Delete Movie</button>
+          </div>
+        </form>
+
+        <button type="button" class="back-to-movies-crud-menu">Back to Movies CRUD Menu</button>
+
+        <a href="index.html">
+          <button type="button">Back to Main Menu</button>
+        </a>
+      </section>
+
+    </div>
+  </main>
+</body>
+
+</html>
