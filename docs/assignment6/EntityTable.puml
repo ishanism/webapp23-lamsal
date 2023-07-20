@@ -1,0 +1,41 @@
+@startuml et
+
+title "Entity Table"
+
+object Movie <<JS entity table>> {
+  movieId[1]: PositiveInteger {id}
+  title[1] : String
+  releaseDate[1] : Date
+  movieCategory[0..1] : MovieCategoryEL
+  tvSeriesName[0..1] : string
+  episodeNo[0..1] : PositiveInteger
+  aboutId[0..1] : Person 
+  director[0..1] : Person
+  actors[*] : Person
+}
+
+note bottom of Movie : <<invariant>>\n{ (movieCategory = "Biography" IFF NOT (about = undefined) \n  ( movieCategory = "TV Series" IFF NOT (tvSeriesName = undefined AND episodeNo = undefined) ) }
+
+enum MovieCategoryEL <<enumeration>> {
+  Biography
+  tvSeriesName
+}
+
+
+object Person <<JS entity table>> {
+  personId[1] : PositiveInteger {id}
+  name[1] : String
+  personCategory[*] : personCategoryEL
+  agentId[0..1] : PositiveInteger
+  ' directorId[0..1] : Director
+  ' actorId[0..1] : Actor
+}
+
+note bottom of Person : personCategory \n 1 = Actor, \n 2 = Director
+
+enum personCategoryEL <<enumeration>>{
+  Actor
+  Director
+}
+
+@enduml

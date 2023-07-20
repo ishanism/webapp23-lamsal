@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4: CRUD by Lamsal</title>
+    <!-- <script src="src/c/initialize.js"></script>
+    <script src="src/m/Movie.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module">
+      console.log("Importing app.mjs");
+      import { clearData, createSampleData } from "./src/c/app.mjs";
+
+
+      const clearButton = document.getElementById("clearMoviesButton"),
+        generateTestDataButtons = document.querySelectorAll("button.generateSampleData");
+      // event handlers
+      clearButton.addEventListener("click", clearData);
+      for (const btn of generateTestDataButtons) {
+        btn.addEventListener("click", createSampleData);
+      }
+    </script>
+</head>
+<body>
+  <h1>Movie Library</h1>
+  <h2>An Example of a A Minimal JavaScript Front-End App</h2>
+  <p>This app supports the following operations:</p>
+  <menu>
+    <li><a href="movies.html">Movies Data</a></li>
+    <li><a href="persons.html">Persons Data</a></li>
+  </menu>
+  <menu>
+    <li><button type="button" id="clearMoviesButton">
+      Clear database
+    </button></li> 
+    <li><button type="button" class="generateSampleData">
+      Create Sample data
+    </button></li>
+  </menu>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head
+  <meta charset="UTF-8" />
+  <title>Assignment 4: CRUD Persons by Lamsal</title>
+  <script src="./src/v/Persons.mjs" type="module"></script>
+</head>
+  
+
+<main>
+  <div>
+
+    <!-- Person Menu Section -->
+
+    <section id="Person-Menu">
+      <h2>Person Menu</h2>
+      <ul>
+        <li>
+          <button type="button" id="P_CRUD_R">
+            Retrieve and List All Persons
+          </button>
+        </li>
+        <li>
+          <button type="button" id="P_CRUD_C">Create Person</button>
+        </li>
+        <li>
+          <button type="button" id="P_CRUD_U">Update Person</button>
+        </li>
+        <li>
+          <button type="button" id="P_CRUD_D">Delete Person</button>
+        </li>
+      </ul>
+
+      <a href="index.html">
+        <button type="button">Back to Main Menu</button>
+      </a>
+    </section>
+
+    <!-- Person Menu Section END -->
+
+    <!-- Person CRUD Section - R -->
+
+    <section id="Person-CRUD-R">
+      <h2>Retrieve and List All Persons</h2>
+      <table border="true">
+        <thead>
+          <tr>
+            <th>Person ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Agent</th>
+          </tr>
+        </thead>
+        <tbody id="Person-CRUD-R-List"></tbody>
+      </table>
+      
+      <button type="button" class="back-to-persons-crud-menu">Back to Persons CRUD Menu</button>
+
+      <a href="index.html">
+        <button type="button">Back to Main Menu</button>
+      </a>
+    </section>
+
+    <!-- Person CRUD Section - R END -->
+
+    <!-- Person CRUD Section - C -->
+
+    <section id="Person-CRUD-C">
+      <h2>Create Person</h2>
+      <form id="Person-CRUD-C-Form">
+        <div>
+          <label>Person ID: </label>
+          <input type="text" name="personId" />
+        </div>
+        <div>
+          <label>Name: </label>
+          <input type="text" name="name" />
+        </div>
+        <div>
+          <label>Category: </label>
+          <select name="category" multiple="multiple" />
+        </div>
+        <div>
+          <label>Agent: </label>
+          <select type="text" name="agent" />
+        </div>
+        <div>
+          <button type="submit" name="commit">Save Person</button>
+        </div>
+      </form>
+
+      <button type="button" class="back-to-persons-crud-menu">Back to Persons CRUD Menu</button>
+
+      <a href="index.html">
+        <button type="button">Back to Main Menu</button>
+      </a>
+    </section>
+
+    <!-- Person CRUD Section - C END -->
+
+    <!-- Person CRUD Section - U -->
+
+    <section id="Person-CRUD-U">
+      <h2>Update Person</h2>
+      <form>
+        <div>
+          <label>Select Person: 
+            <select name="selectPerson"><option value=""> --- </option></select>
+          </label>
+        </div>
+        <div>
+          <label>Person ID: </label>
+          <output name="personId" />
+        </div>
+        <div>
+          <label>Name: </label>
+          <input type="text" name="name" />
+        </div>
+        <div>
+          <label>Category: </label>
+          <select name="category" multiple="multiple" />
+        </div>
+        <div>
+          <label>Agent: </label>
+          <select type="text" name="agent" />
+        </div>
+        <div>
+          <button type="submit" name="commit">Save Person</button>
+        </div>
+      </form>
+
+      <button type="button" class="back-to-persons-crud-menu">Back to Persons CRUD Menu</button>
+
+      <a href="index.html">
+        <button type="button">Back to Main Menu</button>
+      </a>
+    </section>
+
+    <!-- Person CRUD Section - U END -->
+
+    <!-- Person CRUD Section - D -->
+
+    <section id="Person-CRUD-D">
+      <h2>Delete Person</h2>
+      <form>
+        <div>
+          <label>Select Person: 
+            <select name="selectPerson"><option value=""> --- </option></select>
+          </label>
+        </div>
+        <div>
+          <button type="submit" name="commit">Delete Person</button>
+        </div>
+      </form>
+
+      <button type="button" class="back-to-persons-crud-menu">Back to Persons CRUD Menu</button>
+
+      <a href="index.html">
+        <button type="button">Back to Main Menu</button>
+      </a>
+    </section>
+
+  </div>
+</main>
+</body>
+
+</html>
+
+
+<body>
+  

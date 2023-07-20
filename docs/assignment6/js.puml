@@ -1,0 +1,55 @@
+@startuml JS_Schema
+
+title "JS_Schema"
+
+object Movie {
+  <<get/set>> movieId[1]: number(int) {id}
+  <<get/set>> title[1] : string
+  <<get/set>> releaseDate[1] : Date
+  <<get/set>> movieCategory[0..1] : number {from MovieCategoryEL, frozen}
+  <<get/set>> tvSeriesName[0..1] : string
+  <<get/set>> episodeNo[0..1] : number(int)
+  <<get/set>> about[0..1] : Person
+  <<get/set>> director[1] : Person
+  <<get/set>> actors[*] : Person
+  --
+  {static} checkMovieId(in movieId : number(int)) : ConstraintViolation
+  {static} checkMovieIdAsId(in movieId : number(int)) : ConstraintViolation
+  {static} checkMovieIdAsIdRef(in movieId : number(int)) : ConstraintViolation
+  {static} checkTitle(in title : string) : ConstraintViolation
+  {static} checkReleaseDate(in date : Date) : ConstraintViolation
+  {static} checkMovieCategory(in cat : number) : ConstraintViolation
+  {static} checkTvSeriesName(in tvName : string) : ConstraintViolation
+  {static} checkEpisodeNo(in epiNo : number(int)) : ConstraintViolation
+  {static} checkAbout(in per : Person) : ConstraintViolation
+  {static} checkDirector(in director : Person) : ConstraintViolation
+  {static} checkActor(in actor : Person) : ConstraintViolation
+  addActor(in actor : Person)
+  removeActor(in actor : Person)
+}
+
+object MovieCategoryEL <<enumeration>> {
+  BIOGRAPHY
+  TV_SERIES_EPISODE
+}
+
+object Person {
+  <<get/set>> personId[1] : PositiveInteger {id}
+  <<get/set>> name[1] : String
+  <<get>>personCategory[*] : PersonCategoryEL
+  <<get/set>>agentId[0..1] : Person
+  --
+  {static} checkPersonId(in id : number(int)) : ConstraintViolation
+  {static} checkPersonIdAsId(in id : number(int)) : ConstraintViolation
+  {static} checkPersonIdAsIdRef(in id : number(int)) : ConstraintViolation
+  {static} checkName(in name : string) : ConstraintViolation
+  {static} checkAgentId(in per : Person) : ConstraintViolation  
+}
+
+object PersonCategoryEL <<enumeration>> {
+  DIRECTOR
+  ACTOR
+}
+
+@enduml
+
